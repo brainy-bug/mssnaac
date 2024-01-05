@@ -28,7 +28,7 @@ const SlideIn = ({ classNames, from, children }) => {
       initial='hidden'
       animate={inView ? "visible" : "hidden"}
       variants={variants}
-      transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
+      transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
       className={classNames}
     >
       {children}

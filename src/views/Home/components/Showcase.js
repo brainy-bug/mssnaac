@@ -59,7 +59,7 @@ function Showcase() {
                 />
                 <div className={styles.counter}>
                   <h2 ref={ref}>
-                    <CountUp end={inView ? 10 : 0} duration={10.5} />+
+                    <CountUp end={inView ? 10 : 0} duration={6} />+
                   </h2>
                   <p>
                     <span>Active</span>
@@ -77,7 +77,7 @@ function Showcase() {
                 </div>
                 <div className={styles.counter}>
                   <h2>
-                    <CountUp end={inView ? 100 : 0} duration={2.5} />+
+                    <CountUp end={inView ? 100 : 0} duration={6} />+
                   </h2>
                   <p>
                     <span>Vibrant</span>
@@ -94,7 +94,7 @@ function Showcase() {
                 />
                 <div className={styles.counter}>
                   <h2>
-                    <CountUp end={inView ? 500 : 0} duration={2.5} />+
+                    <CountUp end={inView ? 500 : 0} duration={6} />+
                   </h2>
                   <p>
                     <span>Tutored</span>
