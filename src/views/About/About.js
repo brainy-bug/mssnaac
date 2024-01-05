@@ -12,7 +12,7 @@ function About() {
     <section>
       <div className='text-xs md:text-lg bg-[#f6faf6]'>
         <div
-          className='w-full p-12 flex-shrink-0 bg-no-repeat bg-right'
+          className='w-full px-8 py-10 sm:p-12 flex-shrink-0 bg-no-repeat bg-right'
           style={{ backgroundImage: `url('/imgs/vector-2.png')` }}
         >
           <div className='text-justify sm:text-left sm:w-[85%] '>
@@ -34,7 +34,7 @@ function About() {
         </div>
       </div>
 
-      <div className=' flex gap-[2rem] justify-between items-center p-12'>
+      <div className=' flex gap-[2rem] justify-between items-center px-8 py-10 sm:p-12'>
         <SlideIn
           from='left'
           classNames='text-justify sm:text-left max-w-[480px]'
@@ -51,7 +51,10 @@ function About() {
       </div>
 
       <div className='bg-[#f4faf4] pt-8' name='paginate-heading'>
-        <SlideIn from='top' classNames='flex items-center justify-center  pb-[50px]'>
+        <SlideIn
+          from='top'
+          classNames='flex items-center justify-center  pb-[50px]'
+        >
           <h2 className='font-bold text-[25px] sm:text-[35px] text-center'>
             <span>MSSNAAC Executive Committee</span>
             <YearDropdown />
@@ -70,7 +73,7 @@ function About() {
           backgroundSize: "350px",
         }}
       >
-        <div className='sm:max-w-[60%]'>
+        <div className='sm:max-w-[60%] h-[80%] flex flex-col justify-evenly'>
           <SlideIn from='left'>
             <Title
               title='Become a Member'
@@ -79,10 +82,7 @@ function About() {
             />
           </SlideIn>
           <SlideIn from='bottom'>
-            <NavLink
-              to='/registration'
-              className='px-20 py-3 text-2xl font-bold bg-[#007300] text-white rounded hover:opacity-80  font'
-            >
+            <NavLink to='/registration' className='btn-green'>
               JOIN US
             </NavLink>
           </SlideIn>

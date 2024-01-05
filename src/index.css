@@ -109,13 +109,9 @@ li {
   right: 13px;
 }
 
-
-
-
-
 /* pagination CSS styles */
 .number-item {
-  margin: 0 5px;
+  margin: 0 8px;
   display: inline-block;
 }
 
@@ -128,7 +124,7 @@ li {
 .prev-item,
 .next-item {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 12px;
 }
 .prev-link,
 .next-link {
@@ -137,7 +133,6 @@ li {
   color: #fff;
   padding: 10px 25px;
   border: 1px solid transparent;
-  border-radius: 3px;
 }
 
 .active-link {
@@ -156,6 +151,19 @@ li {
 }
 
 .pagination {
+  width: fit-content;
+  margin: auto;
   padding: 3rem 0;
   text-align: center;
+}
+
+@media screen {
+  .prev-link,
+  .next-link {
+    padding: 8px 15px;
+  }
+
+  .number-link {
+    padding: 3px;
+  }
 }

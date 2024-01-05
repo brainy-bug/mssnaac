@@ -1,15 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const Title = ({
-  title, text, text2, text3,
-}) => (
+const Title = ({ title, text, text2, text3 }) => (
   <div>
-    <h2 className="text-[35px] font-bold pb-3 font">{title}</h2>
+    <h2 className='text-[35px] font-bold pb-4 '>{title}</h2>
     <div>
-      <p className="text-base lg:text-[18px] font-medium pb-4 leading-[40px] lg:leading-[50px]">{text}</p>
-      <p className="text-base lg:text-[18px] font-medium pb-4 leading-[40px] lg:leading-[50px]">{text2}</p>
-      <p className="text-base lg:text-[18px] font-medium leading-[40px] lg:leading-[50px]">{text3}</p>
+      <p className='text-base lg:text-[18px] font-medium pb-4 leading-[40px] lg:leading-[50px]'>
+        {text}
+      </p>
+      <p className='text-base lg:text-[18px] font-medium pb-4 leading-[40px] lg:leading-[50px]'>
+        {text2}
+      </p>
+      <p className='text-base lg:text-[18px] font-medium leading-[40px] lg:leading-[50px]'>
+        {text3}
+      </p>
     </div>
   </div>
 );
