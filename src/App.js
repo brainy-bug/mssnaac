@@ -5,8 +5,8 @@ import { animateScroll } from "react-scroll";
 import {
   Home,
   About,
-  // Donation,
-  // Detail,
+  Donation,
+  Detail,
   MainLayout,
   Error404,
   UnderConstruction,
@@ -28,8 +28,8 @@ const App = () => {
         <Route path='/' element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/donate' element={<UnderConstruction />} />
-          <Route path='/donate/details' element={<UnderConstruction />} />
+          <Route path='/donate' element={<Donation />} />
+          <Route path='/donate/details' element={<Detail />} />
           <Route path='/societies' element={<UnderConstruction />} />
           <Route path='/contact-us' element={<UnderConstruction />} />
           <Route path='/registration' element={<UnderConstruction />} />
