@@ -5,13 +5,13 @@ const Title = ({ title, text, text2, text3 }) => (
   <div>
     <h2 className='text-[35px] font-bold pb-4 '>{title}</h2>
     <div>
-      <p className='text-base lg:text-[18px] font-medium pb-4 leading-[40px] lg:leading-[50px]'>
+      <p className='text-base lg:text-[18px] font-medium pb-4 leading-[35px]'>
         {text}
       </p>
-      <p className='text-base lg:text-[18px] font-medium pb-4 leading-[40px] lg:leading-[50px]'>
+      <p className='text-base lg:text-[18px] font-medium pb-4 leading-[35px]'>
         {text2}
       </p>
-      <p className='text-base lg:text-[18px] font-medium leading-[40px] lg:leading-[50px]'>
+      <p className='text-base lg:text-[18px] font-medium leading-[35px]'>
         {text3}
       </p>
     </div>

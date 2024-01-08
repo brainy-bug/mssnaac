@@ -1,21 +1,24 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import Title from "./Title";
 import Pagination from "../../components/Pagination";
 import YearDropdown from "./YearDropdown";
 
 import SlideIn from "../../animations/SlideIn";
-import { NavLink } from "react-router-dom";
 
 function About() {
   return (
     <section>
-      <div className='text-xs md:text-lg bg-[#f6faf6]'>
+      <div className='text-xs md:text-sm bg-[#f6faf6]'>
         <div
           className='w-full px-8 py-10 sm:p-12 flex-shrink-0 bg-no-repeat bg-right'
-          style={{ backgroundImage: `url('/imgs/vector-2.png')` }}
+          style={{
+            backgroundImage: `url('/imgs/vector-2.png')`,
+            backgroundSize: "220px",
+          }}
         >
-          <div className='text-justify sm:text-left sm:w-[85%] '>
+          <div className='sm:w-[85%] '>
             <SlideIn from='left'>
               <Title
                 title='MSSN Vision'
@@ -34,16 +37,16 @@ function About() {
         </div>
       </div>
 
-      <div className=' flex gap-[2rem] justify-between items-center px-8 py-10 sm:p-12'>
-        <SlideIn
-          from='left'
-          classNames='text-justify sm:text-left max-w-[480px]'
-        >
+      <div className=' flex gap-[2rem] justify-between items-center px-8 py-12 sm:p-12'>
+        <SlideIn from='left' classNames=' max-w-[480px]'>
           <Title
             title='Our Activities'
             text='As a Muslim Student Society, our primary assignment is to coordinate secondary schools in Akinyele Local Government.'
             text2='We provide educational support, organize events, and engage in community service to help spread the message of Islam while creating a positive impact in our community.'
           />
+          <NavLink to='/photo-gallery' className='btn-green my-4'>
+            View activities
+          </NavLink>
         </SlideIn>
         <SlideIn from='right' classNames='hidden sm:block px-28 mx-auto '>
           <img src='/imgs/activities.png' alt='activities-icon' />
@@ -70,7 +73,7 @@ function About() {
         className='w-full px-[2rem] flex items-center h-[35rem] flex-shrink-0 bg-no-repeat bg-right bg-opacity-10'
         style={{
           backgroundImage: `url('/imgs/vector-3.png')`,
-          backgroundSize: "350px",
+          backgroundSize: "300px",
         }}
       >
         <div className='sm:max-w-[60%] h-[80%] flex flex-col justify-evenly'>
