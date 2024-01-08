@@ -47,7 +47,7 @@ function Donate() {
       setIsAmountError(true);
       return;
     }
-    navigate("/donate/details");
+    navigate("/donate/payment");
   };
 
   return (
@@ -121,7 +121,6 @@ function Donate() {
                     : ""
                 }`}
                 style={{ width: "100%" }}
-                to='/donate/details'
               >
                 Submit
               </button>

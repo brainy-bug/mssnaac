@@ -6,7 +6,7 @@ import {
   Home,
   About,
   Donation,
-  Detail,
+  Payment,
   MainLayout,
   Error404,
   UnderConstruction,
@@ -29,7 +29,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/donate' element={<Donation />} />
-          <Route path='/donate/details' element={<Detail />} />
+          <Route path='/donate/payment' element={<Payment />} />
           <Route path='/societies' element={<UnderConstruction />} />
           <Route path='/contact-us' element={<UnderConstruction />} />
           <Route path='/registration' element={<UnderConstruction />} />
