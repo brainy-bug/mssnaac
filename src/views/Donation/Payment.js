@@ -18,7 +18,7 @@ function Payment() {
 
   return (
     <section className='bg-[#E6F4E6] flex'>
-      <section className='h-screen w-[85%] order-2 sm:order-1'>
+      <section className='h-screen w-[90%] mx-auto order-2 sm:order-1'>
         <div
           className='items-center flex w-fit h-fit p-8 pb-2 font-semibold text-[#007300] cursor-pointer'
           onClick={() => navigate(-1)}
@@ -32,14 +32,14 @@ function Payment() {
             {display === 1 ? (
               <CreditCard amountToPay={amountToPay} />
             ) : display === 2 ? (
-              <BankTransfer />
+              <BankTransfer amountToPay={amountToPay} />
             ) : (
-              <PayPal />
+              <PayPal amountToPay={amountToPay} />
             )}
           </div>
         </div>
       </section>
-      <div className='w-[15%] order-1 sm:order-2'>
+      <div className='w-0 sm:w-[15%] hidden sm:block order-1 sm:order-2'>
         <Background />
       </div>
     </section>

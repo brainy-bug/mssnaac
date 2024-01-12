@@ -1,52 +1,75 @@
+/* eslint-disable react/prop-types */
 import React from "react";
-import { FaCopy } from "react-icons/fa6";
+import "../styles/bank-transfer.css";
+import { GoCopy } from "react-icons/go";
 
-const BankTransfer = () => {
-  const [copied, setCopied] = React.useState(false);
+const BankTransfer = ({ amountToPay }) => {
+  const [isTextCopied, setIsTextCopied] = React.useState(false);
 
   const handleCopy = (e) => {
-    navigator.clipboard.writeText(e.target.innerText);
-    setCopied(true);
+    console.log(e.target);
+
+    if (e.target.name === "amountToPay") {
+      navigator.clipboard.writeText(amountToPay);
+      setIsTextCopied(true);
+    } else if (e.target.name === "accountNumber") {
+      navigator.clipboard.writeText("3130998097");
+      setIsTextCopied(true);
+    }
     setTimeout(() => {
-      setCopied(false);
+      setIsTextCopied(false);
     }, 2000);
   };
 
   return (
     <section className='w-[85%] text-base mx-auto'>
-      <p className='text-base text-center mb-6'>
+      <p className='text-base text-center mb-10'>
         Kindly enter the details below in your bank app to pay
       </p>
-      <div className='flex flex-col sm:flex-row justify-between'>
-        <div className='my-4'>
-          <p>Amount</p>
-          <p className='text-[#007300] font-semibold text-2xl flex gap-2 cursor-pointer'>
-            NGN <span onClick={handleCopy}>100,000</span>
-            {!copied ? <FaCopy /> : "Copied"}
-          </p>
-        </div>
-        <div className='my-4 sm:text-right'>
-          <p>Account Number</p>
+      <div className='transfer-details'>
+        <div>
+          <label>Amount</label>
           <p
-            className='text-[#007300] font-semibold text-2xl flex gap-2 cursor-pointer'
+            className='flex items-baseline'
             onClick={handleCopy}
+            name='amountToPay'
           >
-            3130998097 {!copied ? <FaCopy /> : "Copied"}
+            NGN {amountToPay}
+            <span
+              className={`ml-2 italic ${isTextCopied ? "text-[0.75rem]" : ""}`}
+            >
+              {isTextCopied ? "copied" : <GoCopy />}
+            </span>
+          </p>
+        </div>
+        <div className='sm:text-right'>
+          <label>Account Number</label>
+          <p
+            className='flex items-baseline'
+            onClick={handleCopy}
+            name='accountNumber'
+          >
+            3130998097
+            <span
+              className={`ml-2 italic ${isTextCopied ? "text-[0.75rem]" : ""}`}
+            >
+              {isTextCopied ? "copied" : <GoCopy />}
+            </span>
           </p>
         </div>
       </div>
-      <div className='flex flex-col sm:flex-row justify-between'>
-        <div className='my-4'>
-          <p>Bank name</p>
-          <p className='font-semibold text-2xl'>FIRST BANK OF NIGERIA</p>
+      <div className='transfer-details'>
+        <div>
+          <label>Bank name</label>
+          <p>FIRST BANK OF NIGERIA</p>
         </div>
-        <div className='my-4 sm:text-right'>
-          <p>Beneficiary</p>
-          <p className='text-[#007300] font-semibold text-2xl'>MSSN AAC</p>
+        <div className='text-left sm:text-right'>
+          <label>Beneficiary</label>
+          <p>MSSN AAC</p>
         </div>
       </div>
-      <button className='btn-green mt-6' style={{ width: "100%" }}>
-        Transfer done
+      <button className='btn-green mt-4' style={{ width: "100%" }}>
+        I&apos;ve made the transfer
       </button>
     </section>
   );
